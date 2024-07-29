@@ -15,7 +15,7 @@ class ConsultScheduling
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    protected $consult;
+    public $consult;
 
     /**
      * Create a new event instance.

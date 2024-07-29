@@ -15,6 +15,7 @@ class AppServiceProvider extends ServiceProvider
         AppointmentInterface::class => AppointmentService::class,
         ConsultInterface::class => ConsultService::class,
     ];
+
     /**
      * Register any application services.
      */

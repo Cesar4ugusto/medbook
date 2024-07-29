@@ -7,7 +7,7 @@ use App\Notifications\ConsultSchedulingNotification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class SendConsultSchedulingNotification implements ShouldQueue
+class SendConsultSchedulingNotification
 {
     /**
      * Create the event listener.
@@ -22,6 +22,6 @@ class SendConsultSchedulingNotification implements ShouldQueue
      */
     public function handle(ConsultScheduling $event): void
     {
-        $event->consult->patient_email->notify(new ConsultSchedulingNotification());
+        $event->consult->notify(new ConsultSchedulingNotification());
     }
 }
